@@ -1,0 +1,186 @@
+.body{
+	margin: 0;
+	font-family: monospace;
+	background-color: whitesmoke; 
+}
+
+.header{
+	background-color: darkblue;
+	display: flex;
+}
+
+.nav{
+	width: 100%;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background-color: lightblue;
+	grid-area: navbar;
+}
+
+.a-navbar{
+	text-decoration: none;
+	color: navyblue;
+	font-size: 16pt;
+	margin: 10px;
+
+}
+.a-sidebar{
+	text-decoration: none;
+	color: #eeb838;
+	font-size: 20pt;
+	margin: 10px;	
+
+}
+
+.aside-div{
+	padding: 10px;
+
+}
+
+.holder{
+	display: grid;
+	grid-template-areas:
+	'navbar navbar'
+	'main sidebar'
+	'main sidebar';
+
+
+}
+
+.main{
+	display: flex;
+	font-size: 14pt;
+	text-align: left;
+	grid-area: main;
+}
+
+.main-img{
+	margin: 10px;
+	width: 280px;
+}
+
+.main-p{
+}
+
+.aside{
+	background-color: darkblue;
+	grid-area: sidebar;
+
+}
+
+.footer{
+	background-color: darkgrey;
+	height: 100px;
+	display: flex;
+	align-items: center;
+}
+
+.logo{
+	width: 120px;
+	height: 110px;
+	margin: 15px;
+}
+
+.logo-text{
+
+	font-size: 35pt;
+	color: #eeb838;
+	margin-left: 15px;
+}
+
+.p-footer{
+	color: whitesmoke;
+	font-size: 16pt;
+	padding: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+
+  .logo{
+  	width: 90px;
+  	height: 80px;
+  }
+
+  .logo-text{
+  	font-size: 26pt;
+  }
+
+  .body {
+  }
+
+  .p-footer{
+  	width: 100%;
+  	text-align: center;
+  }
+
+  .header{
+  	display: flex;
+  }
+
+  .main{
+  	display: flex;
+  	flex-wrap: wrap;
+  }
+
+  .div-img{
+  	margin: auto;
+
+  }
+
+  .main-img{
+  }
+
+  .holder{
+  	display: grid;
+	grid-template-areas:
+	'main main'
+	'navbar navbar'
+	'sidebar sidebar';
+  }
+
+  .aside{
+  	display: flex;
+  	justify-content: center;
+  }
+
+.a-sidebar{
+	  	display: flex;
+
+	text-align: center;
+
+}
+
+.aside-div{
+  	width: auto;
+  	text-align: center;
+}
+
+
+  .nav{
+  	display: flex;
+  	justify-content: center;
+  }
+
+  .a-navbar{ 
+  	font-size: 12pt;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+
+  .header{
+  	margin: auto;
+  	padding: auto;
+  }
+
+  .logo{
+    margin: auto;
+  	padding: auto;
+  	margin-left: 10%;	
+  }
+
+	.nav{
+  	flex-wrap: wrap;
+  }
+
+}

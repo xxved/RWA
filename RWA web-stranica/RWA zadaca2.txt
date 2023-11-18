@@ -1,0 +1,38 @@
+2.1. ZADATAK - Vedran Maric - 2215/RR
+a) Pokreće verziju 1.1 protokol. To vidimo iz headera: "GET /hypertext/WWW/TheProject.html HTTP/1.1"
+
+b) Ovisi o resursu koji se dohvaća. Većina .png resursa se dohvaća http 1.1 protokolom, a većina .js resursa se dohvaćaj pomoću http 2.0 protokola uz par
+iznimki poput remote.js resursa koji se dohvaća http 3 protokolom.
+
+c) Accept-Language: hr-HR,hr;q=0.9,en-US;q=0.8,en;q=0.7,bs;q=0.6,sr;q=0.5 stoji u headeru.
+
+d) IPv4 adresa mojeg racunala: 192.168.0.107
+IP adresa sum.ba: 212.39.111.33
+
+e) zadnji put je modificirana Thu, 03 Dec 1992 08:37:20 GMT
+
+f) 128 bajtova je dohvatio poslužitelj, a 3.6 kilobajta resursa je učitala stranica
+
+g) Server: Apache - Na Chrome-u ovaj dio pronalazimo na način da pritisnemo F12, zatim odlazimo na Network>Headers>Response Headers
+
+h) Moj preglednik preferira: 1. hrvatski, 2. engleski (US), 3. engleski, 4. bosanski i 5. srpski jezik
+To provjeravam odlaskom na Settings>Languages na Google Chrome-u. Ovi jezici ce se postaviti kao "Accept-Language" s razlicitim prioritetima 
+prilikom slanja Request Headera stranicama kao sto je prikazano pod c).
+
+2.2 ZADATAK
+
+a) MIME format:
+za pravilnik mobilnosti: application/pdf
+za sumarum logo: image/png
+za tekstualni dokument: text/plain
+Ovo pronalazimo unutar response headera (samo ako prvi put ucitamo stranicu ili zatrazimo ponovni download preko Ctrl+F5). U protivnom bivamo preusmjereni
+na vec prethodno preuzet dokument zbog cega ovaj dio vise ne bude u responsu.
+
+b) veličina resursa: za pravilnik mobilnosti je 345 bajtova
+za sumarum logo je 17.4 kilobajta resursa
+za tekstualni dokument je 1 100 bajtova (1.1 kilobajt) resursa
+
+c) verzija HTTP posluzitelja:
+za pravilnik mobilnosti: HTTP/1.1
+za sumarum logo: HTTP/1.1 
+za tekstualni dokument: HTTP/1.1
