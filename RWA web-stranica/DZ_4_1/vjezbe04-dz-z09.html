@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 	/*Napisati javascript funkciju koja ima jedan ulazni argument koji je broj. Funkcija zatim ispisuje sve savršene brojeve od broja 1 do toga broja.
+
+*/
+ 	
+
+	function savrseniBrojevi(broj) {
+	  	for (var i = 1; i <= broj; i++) {
+	    	var zbrojDjelitelja = 0;
+
+	    	for (var j = 1; j < i; j++) {
+	      		if (i % j === 0) {
+	        		zbrojDjelitelja += j;
+	      		}
+	    	}
+
+	    	if (zbrojDjelitelja === i) {
+	      		console.log(i);
+	    	}
+	  	}
+	}
+
+	var broj = 15000;
+	savrseniBrojevi(broj);
+
+
+
+
+ </script>
+</body>
+</html>

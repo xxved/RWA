@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 	/*Napravite anonimnu funkciju i postavite je kao vrijednost varijable. Naša bi funkcija trebala raditi na ovaj način: 
+•	Ako je proslijeđen broj, vraća kvadrat tog broja;
+•	Inače vraća obavijest o pogrešci
+*/
+ 	
+
+ 	var provjeraBroja = function(a){
+ 		if (isNaN(a)) {
+ 			return "Greska pri unosu";
+ 		}
+ 		else{
+ 			return a*a;
+ 		}
+ 	}
+
+ 	console.log(provjeraBroja(20));
+
+
+ </script>
+</body>
+</html>

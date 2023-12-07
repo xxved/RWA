@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 	//Napisati JS program koji u konzolu i html dokument ispisuje proste brojeve od 1 do 1000 (u browseru svaki put u novom retku);
+ 	for (var i = 2; i <= 1000; i++) {
+ 		var prost = 1;
+ 		for (var j = 2; j <= i/2; j++) {
+ 			if (i%j == 0) {
+ 				prost=0;
+ 			}
+ 			else{
+ 				
+ 			}
+ 		}
+
+ 		if (prost == 1) {
+ 			document.write(i + '<br/>');
+ 			console.log(i);
+ 		}
+ 	}
+ </script>
+</body>
+</html>

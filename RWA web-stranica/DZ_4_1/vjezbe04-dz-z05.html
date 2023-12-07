@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 	/*U JS kreirajte novi objekt  s članovima
+firstName:"Marko", lastName:"Maric", age:40, eyeColor:"black"
+Definirajte još nekoliko objekata s sličnim indeksima i različitim vrijednostima. Putem neke od petlji ispišite vrijednosti i indekse objekata u browser.*/
+ 	
+
+ 	osoba1 = {
+ 		firstName:"Marko", lastName:"Maric", age:40, eyeColor:"black"
+ 	}
+ 	osoba2 = {
+ 		firstName:"Ana", lastName:"Maric", age:13, eyeColor:"blue"
+ 	}
+ 	osoba3 = {
+ 		firstName:"Ivan", lastName:"Zovko", age:20, eyeColor:"brown"
+ 	}
+ 	
+ 	ljudi = [osoba1, osoba2, osoba3];
+
+ 	for (var i = 0; i < ljudi.length; i++) {
+ 		document.write("Indeks objekta: " + i + '<br/>');
+  		document.write("firstName: " + ljudi[i].firstName + '<br/>');
+  		document.write("lastName: " + ljudi[i].lastName + '<br/>');
+  		document.write("age: " + ljudi[i].age + '<br/>');
+  		document.write("eyeColor: " + ljudi[i].eyeColor + '<br/>');
+  		document.write("-------------------------" + '<br/>');
+ 	}
+
+
+
+ </script>
+</body>
+</html>

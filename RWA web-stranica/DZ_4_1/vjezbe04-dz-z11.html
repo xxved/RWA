@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 	/*Ulazno polje ima format:
+const tempDay = ['2023-11-29', -1, 0, -0.5,0.5, 0, 1.2,1.8,2, 3, 4, 6, 9, 12, 7, 6, 6,8,5,4,2,3,2,1,0];
+
+Polje sadrži datum i vrijednosti temperature kroz 24 sata. Napisati funkciju koja obrađuje ovo ulazno polje a ispisuje u konzoli: datum, najmanju i najveću dnevnu temperaturu, te prosječnu temperaturu za taj dan.
+*/
+ 	
+
+const tempDay = [
+  	'2023-11-29', -1, 0, -0.5, 0.5, 0, 1.2, 1.8, 2, 3, 4, 6, 9, 12, 7, 6, 6, 8, 5, 4, 2, 3, 2, 1, 0
+];
+
+function analizirajTemperaturu(tempDay) {
+  	var temperatura = tempDay.slice(1);
+  	var najniza = Math.min(...temperatura);
+  	var najvisa = Math.max(...temperatura);
+
+	let zbroj = 0;
+	for (i = 0; i < temperatura.length; i++) {
+  		zbroj += temperatura[i]; 
+	}
+
+	var prosjek = zbroj / temperatura.length; 
+
+
+	console.log('Datum:', tempDay[0]);
+  	console.log('Najniža temperatura:', najniza);
+  	console.log('Najviša temperatura:', najvisa);
+  	console.log('Prosjek temperature:', prosjek);
+}
+
+analizirajTemperaturu(tempDay);
+
+
+
+
+ </script>
+</body>
+</html>

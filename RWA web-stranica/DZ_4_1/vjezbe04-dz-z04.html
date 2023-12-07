@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 	/*U Javascriptu imate polje koji je inicijalno zadano/deklarirano  kao:
+polje = new Array(1,2,3,4,7,8,5,6,9, 55, 12, 4,85);
+Pomoću metoda za rukovanje poljem tipom podataka, uraditi ispis u browser:
+a.	Ispisati koliko je inicijalna dužina polja polje
+b.	Ispisati polje ali sortirano s vrijednostima od najvećeg ka najmanjem
+c.	Ispisati polje ali  sortirano s vrijednostima od najmanjeg ka najvećem najmanjem
+d.	U sortiranom polju iz c) ukloniti zadnji član polja
+e.	U polju iz d) dodati na kraj polja nova dva člana polja s vrijednostima 19 i 22
+f.	Definirajte novo polje polje2 s članovima "Banana", "Orange", "Apple", "Mango". Nakon toga  spojite polje i polje2 u novo polje naziva polje_final i ispišite njegove vrijednosti, na proizvoljan način
+*/
+ 	polje = new Array(1,2,3,4,7,8,5,6,9, 55, 12, 4,85);
+ 	
+ 	document.write(polje.length);
+
+ 	for (var i = 0; i < polje.length; i++) {
+ 		for (var j = 0; j <= polje.length; j++) {
+ 			if (polje[i]>polje[j]) {
+ 				pom = polje[i];
+ 				polje[i] = polje[j];
+ 				polje[j] = pom;
+ 			}
+ 		}
+ 	}
+ 	document.write('<br/>' + polje);
+
+
+ 	for (var i = 0; i < polje.length; i++) {
+ 		for (var j = 0; j <= polje.length; j++) {
+ 			if (polje[i]<polje[j]) {
+ 				pom = polje[i];
+ 				polje[i] = polje[j];
+ 				polje[j] = pom;
+ 			}
+ 		}
+ 	}
+ 	document.write('<br/>' + polje);
+
+ 	polje.pop();
+	document.write('<br/>' + polje);
+
+	polje.push(19, 22);
+	document.write('<br/>' + polje);
+
+	polje2 = new Array("Banana", "Orange", "Apple", "Mango");
+
+	polje_final = polje+polje2;
+	document.write('<br/>' + polje_final);
+
+ </script>
+</body>
+</html>

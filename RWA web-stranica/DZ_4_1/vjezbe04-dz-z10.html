@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 	/*Napisati javascript funkciju koja ima dva ulazna argumenta koji su brojevi. Funkcija zatim ispisuje pet random brojeva između ta dva broja.*/
+ 	
+
+	function randomBrojevi(prviBroj, drugiBroj) {
+  		for (var i = 0; i < 5; i++) {
+    	var randomBroj = Math.floor(Math.random() * (drugiBroj - prviBroj + 1)) + prviBroj;
+    		console.log(randomBroj);
+  		}
+	}
+
+	var broj1 = 10;
+	var broj2 = 20;
+	randomBrojevi(broj1, broj2);
+
+
+
+
+ </script>
+</body>
+</html>
