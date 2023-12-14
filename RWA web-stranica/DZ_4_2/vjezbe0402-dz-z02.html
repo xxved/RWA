@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+</head>
+<body>
+<!--
+Napravite HTML dokument s  potrebnim JS dijelom   - html dokument sadrži samo jedno dugme čija je vrijednost “Promijeni pozadinu“ -  Napraviti JavaScript kod da nakon napravljenog klika se promijeni pozadina HTML dokumenta u neku od boja u rasponu (hex. Vrijednosti  #000000 <-> #FFFFFF)
+Također se u samom HTML dokumentu ispod dugmeta  ispiše trenutna boja. Promjenu boje realizirati kroz funkciju.
+-->
+  <script>
+    function promijeniPozadinu() {
+
+      const randomHexColorCode = () => {
+        let n = (Math.random() * 0xfffff * 1000000).toString(16);
+        return '#' + n.slice(0, 6);
+      };
+
+      var a = "a"
+      a = randomHexColorCode();
+      console.log(a);
+      document.write(a);
+      document.body.style.background = a;
+  
+    }
+
+  </script>
+
+  <input type="button" name="button" value="Promijeni pozadinu" onclick="promijeniPozadinu()">
+
+</body>
+</html>

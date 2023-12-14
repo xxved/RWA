@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadaca 4.2 - zadatak 5</title>
+</head>
+<body>
+<!--
+Napraviti html dokument s pripadajućom formom i JS kodom/funkcijom, koja ima 1 ulazni parametar i koja vraća true ili false, a sama funkcija izvršava validaciju registarske oznake vozila BiH broja (). Registarska oznaka vozila se unosu u formu i klikom na validaciju u alertu se vraća ispravan ili ne format registarske oznake.
+-->  
+  <form id="forma">
+    <label for="registarskaOznaka">Unesite registarsku oznaku (XX 123-AB):</label>
+    <input type="text" id="registarskaOznaka">
+    <button type="button" onclick="validirajRegistarskuOznaku()">Validacija</button>
+  </form>
+
+  <script>
+    function validirajRegistarskuOznaku() {
+      let registarskaOznaka = document.getElementById("registarskaOznaka").value;
+      let format = /^[A-Z]{2}\s\d{3}-[A-Z]{2}$/;
+
+      if (format.test(registarskaOznaka)) {
+        alert("Ispravna registarska oznaka");
+        return true;
+      } else {
+        alert("Neispravna registarska oznaka");
+        return false;
+      }
+    }
+  </script>
+
+</body>
+</html>

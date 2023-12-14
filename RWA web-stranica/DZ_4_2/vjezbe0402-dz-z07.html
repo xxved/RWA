@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Izračun dob</title>
+</head>
+<body>
+  <!--Kreirajte novi HTML dokument sa pripadajućom formom sa sljedeće slike koju će korisnik unijeti datum i godinu rođenja. U Javascriptu napraviti funkciju/program koji računa koliko godina ima korisnik i to mu javlja ispisom u 'alert' prozoru. Program pozivati klikom na dugmesubmit ('Izračunaj').-->
+  <form id="dobForm">
+    <div style="margin: 5px;">
+      <label for="dan">Unesite dan rođenja (0-31):</label>
+      <input type="number" id="dan">
+    </div>
+    <br/>
+    <div style="margin: 5px;">
+      <label for="mjesec">Unesite mjesec rođenja (01-12):</label>
+      <input type="number" id="mjesec">
+    </div>
+    <br/>
+    <div style="margin: 5px;">
+      <label for="godina">Unesite godinu rođenja (npr. 1970):</label>
+      <input type="number" id="godina">
+    </div>
+    <br/> 
+    <button type="button" onclick="izracunajDob()">Izračunaj</button>
+  </form>
+
+  <script>
+    function izracunajDob() {
+      let dan = parseInt(document.getElementById("dan").value);
+      let mjesec = parseInt(document.getElementById("mjesec").value) - 1; 
+      let godina = parseInt(document.getElementById("godina").value);
+      
+      let datumRodjenja = new Date(godina, mjesec, dan);
+      let danas = new Date();
+      
+      let godine = danas.getFullYear() - datumRodjenja.getFullYear();
+
+      if (danas.getMonth() < datumRodjenja.getMonth() || 
+          (danas.getMonth() === datumRodjenja.getMonth() && danas.getDate() < datumRodjenja.getDate())) {
+        godine--;
+      }
+
+      alert("Imate " + godine + " godina.");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadaca 4.2 - zadatak 5</title>
+</head>
+<body>
+<!--
+Napisati HTML formu s pripadajućim JS kodom koji radi funkciju zbrajanja 2 broja koja se unesu u prva2 polja a rezultat se nakon klika na dugme Zbroji prikaže u trećem polju:
+-->  
+<div style="display: flex;">
+  <form id="forma1" style="padding: 5px;">
+    <label for="broj1_1">X = </label>
+    <input type="number" id="broj1_1" style="margin: 5px; width: 60px;">
+    <br/>
+    <label for="broj2_1">Y = </label>
+    <input type="number" id="broj2_1" style="margin: 5px; width: 60px;">
+    <br/> 
+    <button type="button" onclick="zbroji1()" style="margin-top: 20px;">Zbroji</button><br>
+    <p>______________________</p>
+    <label for="rezultat_1">REZULTAT  =  </label>
+
+    <input type="text" id="rezultat_1" readonly style=" width: 60px;">
+  </form>
+
+  <form id="forma2" style="padding: 5px;">
+    <label for="broj1_2">X = </label>
+    <input type="number" id="broj1_2" style="margin: 5px; width: 60px;">
+    <br/>
+    <label for="broj2_2">Y = </label>
+    <input type="number" id="broj2_2" style="margin: 5px; width: 60px;">
+    <br/> 
+    <button type="button" onclick="zbroji2()" style="margin-top: 20px;">Zbroji</button><br>
+    <p>______________________</p>
+    <label for="rezultat_2">REZULTAT  =  </label>
+
+    <input type="text" id="rezultat_2" readonly style=" width: 60px;">
+  </form>
+
+  <form id="forma3" style="padding: 5px;">
+    <label for="broj1_3">X = </label>
+    <input type="number" id="broj1_3" style="margin: 5px; width: 60px;">
+    <br/>
+    <label for="broj2_3">Y = </label>
+    <input type="number" id="broj2_3" style="margin: 5px; width: 60px;">
+    <br/> 
+    <button type="button" onclick="zbroji3()" style="margin-top: 20px;">Zbroji</button><br>
+    <p>______________________</p>
+    <label for="rezultat_3">REZULTAT  =  </label>
+
+    <input type="text" id="rezultat_3" readonly style=" width: 60px;">
+  </form>
+
+</div>
+
+<script>
+  function zbroji1() {
+    let broj1 = parseFloat(document.getElementById("broj1_1").value);
+    let broj2 = parseFloat(document.getElementById("broj2_1").value);
+    let rezultat = document.getElementById("rezultat_1");
+
+    if (!isNaN(broj1) && !isNaN(broj2)) {
+      rezultat.value = broj1 + broj2;
+    } else {
+      rezultat.value = "Unesite valjane brojeve!";
+    }
+  }
+
+  function zbroji2() {
+    let broj1 = parseFloat(document.getElementById("broj1_2").value);
+    let broj2 = parseFloat(document.getElementById("broj2_2").value);
+    let rezultat = document.getElementById("rezultat_2");
+
+    if (!isNaN(broj1) && !isNaN(broj2)) {
+      rezultat.value = broj1 + broj2;
+    } else {
+      rezultat.value = "Unesite valjane brojeve!";
+    }
+  }
+
+  function zbroji3() {
+    let broj1 = parseFloat(document.getElementById("broj1_3").value);
+    let broj2 = parseFloat(document.getElementById("broj2_3").value);
+    let rezultat = document.getElementById("rezultat_3");
+
+    if (!isNaN(broj1) && !isNaN(broj2)) {
+      rezultat.value = broj1 + broj2;
+    } else {
+      rezultat.value = "Unesite valjane brojeve!";
+    }
+  }
+
+</script>
+
+</body>
+</html>

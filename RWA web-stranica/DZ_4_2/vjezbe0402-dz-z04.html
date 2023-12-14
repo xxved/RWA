@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+</head>
+<body>
+<!--
+Napravite HTML dokument s formom koja ima jedno tekstualno polje u koje upisujete ocjenu (od 1-5). Nakon unosa ocjene/brojke u polje pomoću JS koda   treba ispisati o kojoj se ocjeni radi (1 – nedovoljan, ….. 5 – odličan), u tijelu HTML dokumenta ispod forme, u odgovarajućem paragrafu. 
+-->  
+  <form id="ocjenaForm">
+    <label for="ocjenaInput">Unesite ocjenu (1-5):</label>
+    <input type="number" id="ocjenaInput" min="1" max="5">
+    <button type="button" onclick="ispisiOcjenu()">Prikaži ocjenu</button>
+  </form>
+
+  <p id="ispisOcjene"></p>
+
+  <script>
+    function ispisiOcjenu() {
+      let ocjenaInput = document.getElementById("ocjenaInput").value;
+      let ocjene = {
+        1: "1 - nedovoljan",
+        2: "2 - dovoljan",
+        3: "3 - dobar",
+        4: "4 - vrlo dobar",
+        5: "5 - odličan"
+      };
+
+      let ispisOcjene = document.getElementById("ispisOcjene");
+
+      if (ocjene[ocjenaInput]) {
+        ispisOcjene.textContent = "Ocjena: " + ocjene[ocjenaInput];
+      } else {
+        ispisOcjene.textContent = "Unesite ocjenu od 1 do 5!";
+      }
+    }
+  </script>
+
+</body>
+</html>
